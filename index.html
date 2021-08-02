@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Danial Petro</title>
+    <link href="images/favicon.ico" rel="icon">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="css/tooltipster.min.css">
+    <link rel="stylesheet" href="css/cubeportfolio.min.css">
+    <link rel="stylesheet" href="css/revolution/navigation.css">
+    <link rel="stylesheet" href="css/revolution/settings.css">
+    <link rel="stylesheet" href="css/jquery.pagepiling.min.css">
+    <link rel="stylesheet" href="css/HambergerNav">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!--PreLoader-->
+    <!-- <div class="loader">
+        <div class="loader-inner">
+            <div class="cssload-loader"></div>
+        </div>
+    </div> -->
+    <!--PreLoader Ends-->
+
+
+
+    <!-- header -->
+    <header class="site-header one-page" id="header">
+        <div class="transparent-bg static-nav p-0">
+            <div class="container-fluid z-index-17 TopHead">
+                <div class="logo-img">
+                    <a class="navbar-brand" href="javascript:void(0)">
+                        <img src="images/logo.png" class="d-inline-block align-top logo-default img-responsive logoImg" alt="">
+                    </a>
+                </div>
+                <div class="flaG">
+                    <ul class="social-icons mt-0 social-icons-simple d-lg-inline-block animated fadeInUp white" data-wow-delay="300ms">
+                        <li class="search-icon">
+                            <a href="javascript:void(0)">
+                                <i class="fa fa-search"></i>
+                            </a>
+                        </li>
+                        <li class="flag-icon">
+                            <a href="javascript:void(0)"> <img src="images/flag-iran.png" class="img-responsive flag-En" alt=""> </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <div class="socialMED">
+        <ul class="quickAcess pareNTfgh">
+            <li class="quickAcessItem follow-us fgh">
+                <a href="javascript:void(0)"><i class="fa fa-linkedin-square linkedin-icon"></i></a>
+            </li>
+            <li class="quickAcessItem follow-us fgh">
+                <a href="javascript:void(0)"><i class="fa fa-instagram"></i></a>
+            </li>
+        </ul>
+    </div>
+
+    <style>
+        .hamburgerParent #toggle {
+            display: none;
+        }
+        /**
+  Hamburger
+**/
+        
+        .hamburgerParent .hamburger {
+            position: absolute;
+            top: 45%;
+            left: 35px;
+            width: 2.5em;
+            height: 45px;
+            z-index: 9999999;
+            cursor: pointer;
+            transform: rotate(90deg);
+        }
+        
+        .hamburgerParent .hamburger div {
+            background-color: transparent;
+        }
+        
+        .hamburgerParent .hamburger .top-bun,
+        .hamburgerParent .hamburger .meat,
+        .hamburgerParent .hamburger .bottom-bun {
+            position: relative;
+            width: 2.5em;
+            height: 5px;
+            border-radius: 3px;
+            background-color: #ffffff;
+            margin-top: 8px;
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .MenUName {
+            position: relative;
+            width: 100%;
+            transition: all 0.3s ease-in-out;
+            color: #fff;
+        }
+        
+        .MenUName:after {
+            content: "MENU";
+            font-family: 'BlenderPro-Heavy', sans-serif;
+            font-size: 16px;
+            position: absolute;
+            transform: rotate(-90deg);
+            left: 30px;
+            bottom: 5px;
+        }
+        /**
+Nav Styles
+**/
+        
+        .hamburgerParent .nav {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            /* background-color: rgba(0, 0, 0, 0.9490196078431372); */
+            background-image: url(images/menu-background.png);
+            background-position: center;
+            background-size: cover;
+            top: -100%;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            overflow: hidden;
+            transition: all 0.3s ease-in-out;
+            transform: scale(0);
+            z-index: 9;
+        }
+        
+        .hamburgerParent nav ul li a {
+            position: relative;
+            text-decoration: none;
+            color: #6ecddd;
+            font-size: 2em;
+            display: inline-block;
+            margin: 0px auto;
+            transition: color 0.2s ease-in-out;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+        /* .hamburgerParent nav ul li a:before {
+            content: '';
+            height: 0;
+            position: absolute;
+            width: 0.25em;
+            background-color: white;
+            left: -0.5em;
+            transition: all 0.2s ease-in-out;
+        } */
+        
+        .hamburgerParent nav ul li a:hover {
+            color: white;
+        }
+        
+        .hamburgerParent nav ul li a:hover:before {
+            height: 100%;
+        }
+        
+        .hamburgerParent #toggle:checked+.hamburger .top-bun {
+            transform: rotate(-45deg);
+            margin-top: 25px;
+        }
+        
+        .hamburgerParent #toggle:checked+.hamburger .bottom-bun {
+            opacity: 0;
+            transform: rotate(45deg);
+        }
+        
+        .hamburgerParent #toggle:checked+.hamburger .meat {
+            transform: rotate(45deg);
+            margin-top: -7px;
+        }
+        
+        .hamburgerParent #toggle:checked+.hamburger+.nav {
+            top: 0;
+            transform: scale(1);
+        }
+        
+        .hamburgerParent .navbar-nav {
+            -ms-flex-direction: row;
+            flex-direction: row;
+        }
+        
+        .hamburgerParent .navbar-nav .nav-link {
+            color: #fefefe;
+        }
+        
+        .hamburgerParent .nav-wrapper {
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            -webkit-margin-top: 5%;
+            -moz-margin-top: 5%;
+            -ms-margin-top: 5%;
+            margin-top: 5%;
+        }
+        
+        .hamburgerParent nav {
+            margin-left: 0 !important;
+        }
+    </style>
+    <div class="hamburgerParent">
+        <input id="toggle" type="checkbox"></input>
+        <label for="toggle" class="hamburger">
+          <div class="top-bun"></div>
+          <div class="meat"></div>
+          <div class="bottom-bun"></div>
+          
+        <div class="MenUName"></div>
+        </label>
+
+        <div class="nav">
+            <div class="nav-wrapper">
+                <nav>
+                    <ul class="navbar-nav mx-auto" id="para-menu">
+                        <li class="nav-item">
+                            <a class="nav-link current" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="javascript:void(0)" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              About
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="javascript:void(0)">Message From charity</a>
+                                <a class="dropdown-item" href="javascript:void(0)">Introduction</a>
+                                <a class="dropdown-item" href="javascript:void(0)">Mission</a>
+                                <a class="dropdown-item" href="javascript:void(0)">Code Of Business Ethics</a>
+                                <a class="dropdown-item" href="javascript:void(0)">Iso Certificates</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="javascript:void(0)" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Project
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="javascript:void(0)">Completed Projects</a>
+                                <a class="dropdown-item" href="javascript:void(0)">Current Projects</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="javascript:void(0)" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Resource
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="javascript:void(0)">Organization Chart </a>
+                                <a class="dropdown-item" href="javascript:void(0)">Board of Directors & President</a>
+                                <a class="dropdown-item" href="javascript:void(0)">Human Resource</a>
+                                <a class="dropdown-item" href="javascript:void(0)">Machinery</a>
+                                <a class="dropdown-item" href="javascript:void(0)">Subsidiaries & Affiliates</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="javascript:void(0)" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Tender
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="javascript:void(0)">Tender Documents</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="javascript:void(0)" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Contact Us
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="javascript:void(0)">PMIS (Poupack)</a>
+                                <a class="dropdown-item" href="javascript:void(0)">KARA Software</a>
+                                <a class="dropdown-item" href="javascript:void(0)">Email</a>
+                                <a class="dropdown-item" href="javascript:void(0)">Cooperation with Danial Petro</a>
+                                <a class="dropdown-item" href="javascript:void(0)">Address</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- header -->
+    <div id="pagepiling">
+        <div class="vertical-line">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+
+        <!--Main Slider-->
+        <section id="home" class="p-0 section page-header parallax-header">
+            <div class="divParentVIDEO">
+                <video autoplay muted loop id="myVideo">
+                    <source src="images/WhatsApp.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="overlay overlay-dark opacity-6 z-index-0"></div>
+            <div class="VideoTitle">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 col-lg-6 offset-lg-2 offset-md-2">
+                            <div class="item-titles left-block whitecolor text-left min-vh-100">
+                                <h2 class="font-bold wow fadeInUp" data-wow-delay="300ms">
+                                    We are </br> thinking about</br> Globalization
+                                </h2>
+                                <p class="top25 bottom25 wow fadeInUp" data-wow-delay="350ms">we use expert and experienced employees, </br> modern equipment and specialized machines to </br> achieve predetermined goals and enter global markets.</p>
+                                <a class="button butn butn__new  wow fadeInUp" href="javascript:void(0)" data-wow-delay="400ms">Mission <i class="fa fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-12 offset-lg-2 col-lg-2 d-flex flex-column justify-content-center align-items-end">
+                            <div class="video-play item-titles right-block whitecolor text-right min-vh-100">
+                                <a class="button wow fadeInUp video-play-btn" href="javascript:void(0)" data-wow-delay="400ms">
+                                    <i class="fa fa-play"></i>
+                                </a>
+                                <span class="video-play-lebel">Play Video</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scrollDown">
+                <p>Scroll down</p>
+                <div></div>
+            </div>
+
+
+        </section>
+        <!--slider end-->
+        <!-- creative -->
+        <section class="single-items section bg-parallax-1" id="creative">
+            <div class="overlay overlay-dark opacity-6 para-opacity z-index-0"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <div class="item-titles center-block darkcolor text-center">
+                            <h2 class="font-bold wow fadeInUp" data-wow-delay="300ms">
+                                <a data-fancybox="group-1" href="javascript:void(0)">We believe in Our  </br>Capabilities</a>
+                            </h2>
+                            <p class="top25 bottom25 wow fadeInUp" data-wow-delay="350ms">We are a midstream service provider that have been </br> serving Iran's energy industry for over 10 years.</p>
+                            <a class="button butn butn__new wow fadeInUp" style="    margin-right: 0;" href="javascript:void(0)" data-wow-delay="400ms">Find out how<i class="fa fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- social -->
+        <section class="single-items section bg-parallax-2" id="social">
+            <div class="overlay overlay-dark opacity-6 para-opacity z-index-0"></div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-lg-8 offset-lg-2 offset-md-2">
+                        <div class="item-titles whitecolor text-left">
+                            <h2 class="font-bold wow fadeInUp" data-wow-delay="300ms">
+                                <a data-fancybox="group-2" href="javascript:void(0)">Our <span> Project</span></a>
+                            </h2>
+                            <p class="top25 bottom25 wow fadeInUp" data-wow-delay="350ms">we have constructed more than 3000 km pipeline.</br> Results of our continuous effort are eighteen completed</br> Projects and twelve current Projects.</p>
+                            <div class="ProjectBtn">
+                                <a class="button butn butn__new wow fadeInUp project-btn" data-wow-delay="400ms" data-fancybox="group-2" href="javascript:void(0)">Our Completed Projects <i class="fa fa-arrow-right"></i> </a>
+                                <a class="button butn butn__new wow fadeInUp project-btn" data-wow-delay="400ms" data-fancybox="group-2" href="javascript:void(0)">Our Current Projects <i class="fa fa-arrow-right"></i></a>
+                            </div>
+                            <h2 class="font-bold wow fadeInUp" data-wow-delay="300ms">
+                                <a data-fancybox="group-2" href="javascript:void(0)">Our Tenders Subject</a>
+                            </h2>
+                            <p class="top25 bottom25 wow fadeInUp" data-wow-delay="350ms">Danial Petro company outsources part of its</br> projects to experienced subcontractors. Eligible companies</br> or people can download tender documents from the following link. </p>
+                            <div class="ProjectBtn">
+                                <a class="button butn butn__new wow fadeInUp project-btn" data-wow-delay="400ms" data-fancybox="group-2" href="javascript:void(0)">Tender <i class="fa fa-arrow-right"></i> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- coorporate -->
+        <section class="single-items section bg-parallax-3" id="corporate">
+            <div class="overlay overlay-dark opacity-6 para-opacity z-index-0"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-sm-8">
+                        <div class="item-titles text-center darkcolor">
+                            <h2 class="font-bold wow fadeInUp" data-wow-delay="300ms">
+                                <a data-fancybox="group-3" href="javascript:void(0)">Important <span> Projects</span></a>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <!--Carousel Wrapper-->
+                <div id="carousel-example-multi" class="carousel slide carousel-multi-item v-2" data-ride="carousel">
+
+                    <!--Controls-->
+                    <div class="controls-top">
+                        <a class="btn-floating" href="#carousel-example-multi" data-slide="prev"><i
+                          class="fa fa-chevron-left"></i></a>
+                        <a class="btn-floating" href="#carousel-example-multi" data-slide="next"><i
+                          class="fa fa-chevron-right"></i></a>
+                    </div>
+                    <!--/.Controls-->
+
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-multi" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-multi" data-slide-to="1"></li>
+                        <li data-target="#carousel-example-multi" data-slide-to="2"></li>
+                        <li data-target="#carousel-example-multi" data-slide-to="3"></li>
+                        <li data-target="#carousel-example-multi" data-slide-to="4"></li>
+                        <li data-target="#carousel-example-multi" data-slide-to="5"></li>
+                    </ol>
+                    <!--/.Indicators-->
+
+                    <div class="carousel-inner v-2" role="listbox">
+
+                        <div class="carousel-item active">
+                            <div class="col-12 col-md-4">
+                                <div class="card mb-2">
+                                    <img class="card-img-top" src="images/Naein-Ray.png" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h4 class="card-title font-weight-bold">Construction 20-inch Pipeline Naein-Kashan-Ray</h4>
+                                        <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                                        <a href="javascript:void(0)" class="btn  btn-md btn-rounded"> More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="col-12 col-md-4">
+                                <div class="card mb-2">
+                                    <img class="card-img-top" src="images/Kohdasht.png" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h4 class="card-title font-weight-bold">Construction 48-inch Pipeline Kohdasht-Chaharmale</h4>
+                                        <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                                        <a href="javascript:void(0)" class="btn  btn-md btn-rounded"> More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="col-12 col-md-4">
+                                <div class="card mb-2">
+                                    <img class="card-img-top" src="images/Sabzab-Ray.png" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h4 class="card-title font-weight-bold">Construction of Sour Crude Oil Pipeline from Sabzab to Ray</h4>
+                                        <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                                        <a href="javascript:void(0)" class="btn  btn-md btn-rounded"> More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="col-12 col-md-4">
+                                <div class="card mb-2">
+                                    <img class="card-img-top" src="images/Makran.png" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h4 class="card-title font-weight-bold">Construction of Makran Steel Factory</h4>
+                                        <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                                        <a href="javascript:void(0)" class="btn  btn-md btn-rounded"> More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="col-12 col-md-4">
+                                <div class="card mb-2">
+                                    <img class="card-img-top" src="images/Khormooj.png" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h4 class="card-title font-weight-bold">Construction of Khormooj Gas Compressor</h4>
+                                        <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                                        <a href="javascript:void(0)" class="btn  btn-md btn-rounded"> More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="col-12 col-md-4">
+                                <div class="card mb-2">
+                                    <img class="card-img-top" src="images/operation-and-Maintenance.png" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h4 class="card-title font-weight-bold">Operation of Assaloyeh Pump station</h4>
+                                        <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                                        <a class="btn  btn-md btn-rounded">More </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section id="contact" class="single-items section bg-parallax-7">
+            <div class="overlay overlay-dark opacity-7 z-index-0"></div>
+            <div class="container full-screen center-block">
+                <div class="contact-body">
+                    <div class="row">
+                        <div class="col-xxs-12 col-xs-6 col-sm-6 col-md-4">
+                            <div class="footer-quick-acess">
+                                <h4 class="quick-acess-title">Quick Links </h4>
+                                <div class="quick-acess">
+                                    <ul class="quickAcess">
+                                        <li class="quickAcessItem"><a href="javascript:void(0)">Danial Petro (Home)</a></li>
+                                        <li class="quickAcessItem"><a href="javascript:void(0)">Nasr Misagh Website</a></li>
+                                        <li class="quickAcessItem"><a href="javascript:void(0)">Nigce</a></li>
+                                        <li class="quickAcessItem"><a href="javascript:void(0)">Iranian Central Oil Fields Company</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xxs-12 col-xs-6 col-sm-6 col-md-4">
+                            <div class="ulockd-footer-qlink">
+                                <h4 class="contact-title">Contact</h4>
+                                <div class="adressLink">
+                                    <ul class="adress-link">
+                                        <li>
+                                            <i class="fa fa-phone"></i>
+                                            <a href="tel:+982143984000">
+                                                (021) 43984000
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-fax"></i>
+                                            <a href="+982188744440">
+                                                (021) 88744440
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-envelope"></i>
+                                            <a href="mailto:info@danialpetro.com">
+                                                info@danialpetro.com
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xxs-12 col-xs-6 col-sm-6 col-md-4">
+                            <div class="ulockd-footer-qlink">
+                                <h4 class="Address-title">Address</h4>
+                                <div class="adressLink">
+                                    <ul class="adress-link">
+                                        <li>
+                                            <i class="fa fa-map-marker"></i>
+                                            <a href="javascript:void(0)">
+                                                No. 39, 5th street, Sabonchi Street, Shahid Beheshti Avenue, Tehran, Iran.
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-map-marker"></i>
+                                            <a href="javascript:void(0)">
+                                                Branch : No. 171,West Hoveyzeh Street , Ghanberzadeh Street, Shahid Beheshti Avenue, Tehran, Iran.
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row  ">
+                        <div class="col-md-12 coprright-section ">
+                            <div class="copyright ">Copyright © 2020 danialpetro.com All Right Reserved Powered By <a href="http://www.azaranweb.org/ " target="_blank ">AzaranWeb</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <!--Bootstrap Core-->
+    <script src="js/propper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!--to view items on reach-->
+    <script src="js/jquery.appear.js"></script>
+    <!--Owl Slider-->
+    <script src="js/owl.carousel.min.js"></script>
+    <!--number counters-->
+    <script src="js/jquery-countTo.js"></script>
+    <!--Parallax Background-->
+    <script src="js/parallaxie.js"></script>
+    <!--Cubefolio Gallery-->
+    <script src="js/jquery.cubeportfolio.min.js"></script>
+    <!--Fancybox js-->
+    <script src="js/jquery.fancybox.min.js"></script>
+    <!--tooltip js-->
+    <script src="js/tooltipster.min.js"></script>
+    <!--wow js-->
+    <script src="js/wow.js"></script>
+    <!--Page Pilling JS-->
+    <script src="js/jquery.pagepiling.min.js"></script>
+    <!--Revolution SLider-->
+    <script src="js/revolution/jquery.themepunch.tools.min.js"></script>
+    <script src="js/revolution/jquery.themepunch.revolution.min.js"></script>
+    <!-- SLIDER REVOLUTION 5.0 EXTENSIONS -->
+    <script src="js/revolution/extensions/revolution.extension.actions.min.js"></script>
+    <script src="js/revolution/extensions/revolution.extension.carousel.min.js"></script>
+    <script src="js/revolution/extensions/revolution.extension.kenburn.min.js"></script>
+    <script src="js/revolution/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script src="js/revolution/extensions/revolution.extension.migration.min.js"></script>
+    <script src="js/revolution/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="js/revolution/extensions/revolution.extension.parallax.min.js"></script>
+    <script src="js/revolution/extensions/revolution.extension.slideanims.min.js"></script>
+    <script src="js/revolution/extensions/revolution.extension.video.min.js"></script>
+    <!--custom functions and script-->
+    <script src="js/functions.js"></script>
+    <script>
+        $('.carousel.carousel-multi-item.v-2 .carousel-item').each(function() {
+            var next = $(this).next();
+            if (!next.length) {
+                next = $(this).siblings(':first');
+            }
+            next.children(':first-child').clone().appendTo($(this));
+
+            for (var i = 0; i < 4; i++) {
+                next = next.next();
+                if (!next.length) {
+                    next = $(this).siblings(':first');
+                }
+                next.children(':first-child').clone().appendTo($(this));
+            }
+        });
+    </script>
+</body>
+
+</html>
